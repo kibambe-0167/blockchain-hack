@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       {/* tabs starts  */}
       <div className="header" >
-        <div className="tabs" >
+        <div className="tabs col-md-10" >
           <div onClick={()=> setTab(prev=>prev=1) } className="tab" >
              Manufacturer
           </div>
