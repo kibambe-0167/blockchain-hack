@@ -12,25 +12,34 @@ const Manu = () => {
   const add = () => {
     console.log( medicine );
 
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
+    if( medicine['Date'] && medicine['MedicineName'] && medicine['MedicalUse'] && medicine['ManufacturerName'] ) {
 
-    var raw = JSON.stringify({
-      "email": medicine['name'],
-      "password": medicine['details']
-    });
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
 
-    var requestOptions = {
-      method: 'POST',
-      headers: myHeaders,
-      body: raw,
-      redirect: 'follow'
-    };
+      var raw = JSON.stringify({
+        "Date": medicine['Date'],
+        "MedicineName": medicine['MedicineName'],
+        "MedicalUse": medicine['MedicalUse'],
+        "ManufacturerName": medicine['ManufacturerName'],
+      });
 
-    fetch("http://127.0.0.1:5000/add", requestOptions)
-      .then(response => response.text())
-      .then(result => console.log(result))
-      .catch(error => console.log('error', error));
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+      };
+
+      fetch("http://127.0.0.1:5000/add", requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+    }
+    else {
+      alert("Please Provide All Data");
+    }
+    
   }
   // end of function
 

@@ -13,17 +13,20 @@ class Blockchain:
 	# create first block and set hash to "0"
 	def __init__(self):
 		self.chain = []
-		self.create_block(proof=1, previous_hash='0')
+		self.create_block(proof=1, previous_hash='0', data={})
 
 	# create a new block
 	# to add further blocks
 	# into the chain
-	def create_block(self, proof, previous_hash):
+	def create_block(self, proof, previous_hash, data):
 		block = {'index': len(self.chain) + 1,
 				'timestamp': str(datetime.datetime.now()),
 				'proof': proof,
-				'previous_hash': previous_hash}
+				'previous_hash': previous_hash,
+				'data': data,
+    }
 		self.chain.append(block)
+  
 		return block
 	
 	
