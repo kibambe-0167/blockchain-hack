@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './App.css';
 
+
 // components
 import Manu from "./tabs/manu";
 import Consumer from "./tabs/consumer";
@@ -19,7 +20,7 @@ function App() {
       <div className="header" >
         <div className="tabs" >
           <div onClick={()=> setTab(prev=>prev=1) } className="tab" >
-             Manufacture
+             Manufacturer
           </div>
 
           <div onClick={()=> setTab(prev=>prev=2) } className="tab" >
@@ -27,20 +28,20 @@ function App() {
           </div>
 
           <div onClick={()=> setTab(prev=>prev=3) } className="tab" >
-            Sahpra 
+            SAHPRA 
           </div>
 
           <div onClick={()=> setTab(prev=>prev=4) } className="tab" >
-            Hospitals
+            Retailers
           </div>
 
           <div onClick={()=> setTab(prev=>prev=5) } className="tab" >
-            User 
+            Consumer 
           </div>
         </div>
 
         <div className="title" >
-          Medi-Ack
+          Medi-Track
         </div>
       </div>
 

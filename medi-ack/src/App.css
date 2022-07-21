@@ -1,7 +1,7 @@
 .App {
     text-align: center;
     min-height: 100vh;
-    background-color: #282c34;
+    background-color: white;
 }
 
 .App .header {
@@ -18,61 +18,69 @@
 
 .App .title {
     font-size: 40px;
-    width: 30%;
+    width: 20%;
     display: flex;
     justify-content: right;
-    /* background-color: blue; */
+    background-color: rgb(131, 10, 90);
     /* align-self: center; */
     text-align: right;
     padding-right: .5em;
 }
 
 .App .tabs {
+    background-color: rgb(131, 10, 90);
     /* background-color: red; */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 70%;
+    width: 80%;
+    padding-top: 8px;
+    padding-bottom: 9px;
 }
 
 .App .tab {
-    background-color: blue;
+    background-color: rgb(131, 10, 90);
     color: white;
     padding-bottom: 5px;
     padding-right: 10px;
     padding-left: 10px;
     text-align: center;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 0px;
 }
 
 .App .tab:hover {
-    background-color: white;
-    color: blue;
+    background-color: rgb(91, 6, 63);
+    border-radius: 5px;
+    color: white;
 }
 
 
 /* main section */
 
-.App .main {
-    /* background-color: yellow; */
-}
+/* .App .main {
+    background-color: rgb(153, 55, 155); 
+} */
 
 
 /*  */
 
 
 /* manufacturer component */
+ 
 
 .manu .addMeds {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: blue;
+    align-items: center;
+    background-color: white;
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 5em;
 }
+
+
 
 .manu .input_ {
     margin-top: 5px;
@@ -80,10 +88,14 @@
     padding: 10px;
     font-size: 16px;
     border-radius: 5px;
-    border-width: 0px;
+    border-width: 2px;
+    border-color: rgb(190, 89, 153);
+    width: 70%;
 }
 
 .manu .addBtn {
+    background-color: rgb(184, 69, 173);
+    color:white;
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 10px;
@@ -92,6 +104,8 @@
     border-width: 0em;
     cursor: pointer;
     font-weight: bold;
+    width: 30em;
+    
 }
 
 .manu .manuTabs {
@@ -102,20 +116,21 @@
 }
 
 .manu .manuTab {
-    background-color: yellow;
+    color:white;
+    background-color: rgb(184, 69, 173);
     padding: 5px;
     padding-right: 10px;
-    padding-left: 10px;
+    padding-left: 5px;
     border-radius: 5px;
     border-width: 0em;
     cursor: pointer;
 }
 
 .manu .manuTab:hover {
-    background-color: white;
-    color: blue;
+    background-color: rgb(210, 26, 189);
+    color: rgb(46, 8, 92);
 }
 
 .manu .manuData {
-    background-color: yellow;
+    background-color: white;
 }

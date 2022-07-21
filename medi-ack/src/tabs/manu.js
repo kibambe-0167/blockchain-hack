@@ -72,9 +72,9 @@ const Manu = () => {
       <div className="manu" >
 
         <div className="manuTabs" >
-          <div onClick={()=>setTab(prev=>prev=1)} className="manuTab" >Add Data</div>
+          {/* <div onClick={()=>setTab(prev=>prev=1)} className="manuTab" >Add Medicine</div>
           <div onClick={()=>setTab(prev=>prev=2)} className="manuTab" >View Data</div>
-          <div onClick={()=>setTab(prev=>prev=3)} className="manuTab" >Track Data</div>
+          <div onClick={()=>setTab(prev=>prev=3)} className="manuTab" >Track Data</div> */}
         </div>
 
 
@@ -82,14 +82,31 @@ const Manu = () => {
           {
             tab === 1 ? (
               <div className="addMeds" >
-                <input onChange={(e)=> setMedicine({...medicine, name:e.target.value }) }
-                  placeholder="Enter medicine name" className="input_" />
+                 {/* <input onChange={(e)=> setMedicine({...medicine, name:e.target.value }) }
+                  placeholder="Medicine ID" className="input_" /> */}
+                  
+                <input onChange={(e)=> setMedicine({...medicine, MedicineName:e.target.value }) }
+                  placeholder="Medicine Name" className="input_" />
+                  
+                <input onChange={(e)=> setMedicine({...medicine, ManufacturerName:e.target.value }) }
+                  placeholder="Manufacturer Name" className="input_" />
 
-                <input onChange={(e)=> setMedicine({...medicine, details:e.target.value }) }
-                  placeholder="Enter medicine details" className="input_" />
+                  <div className="Medate">
+                  <label for="receivedDate"> Manufactured Date : </label>
 
+                  <input onChange={(e)=> setMedicine({...medicine, Date:e.target.value }) }
+                  className="input_" type="Date" placeholder = "Enter Date"/>
+
+                  {/* <input onChange={(e)=> setMedicine({...medicine, Date:e.target.value }) }
+                  className="input_" type="Date" placeholder = "Enter Date"/> */}
+                  </div>
+               
+                <input onChange={(e)=> setMedicine({...medicine, MedicalUse:e.target.value }) }
+                  placeholder="Medical Purpose" className="input_" />
+
+                  <br/>
                 <button className="addBtn" onClick={() => add() } >
-                  Add Medicine
+                  Enlist
                 </button>
 
               </div>

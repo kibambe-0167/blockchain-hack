@@ -6,7 +6,6 @@ const WareH = () => {
       <div className="ware" >
         
         <div className="addMeds" >
-          
         </div>
       </div>
     )
