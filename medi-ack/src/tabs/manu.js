@@ -72,7 +72,6 @@ const Manu = () => {
   // 
   useEffect(() => {
 
-
     // get all data
     getData();
   },[])
@@ -104,7 +103,7 @@ const Manu = () => {
                   placeholder="Medical Purpose" className="input_" />
 
 
-                  <div className="Medate">
+                  <div className="Medate col-md-10">
                   <label for="receivedDate"><b> Manufactured Date : </b></label>
 
                   <input onChange={(e)=> setMedicine({...medicine, Date:e.target.value }) }

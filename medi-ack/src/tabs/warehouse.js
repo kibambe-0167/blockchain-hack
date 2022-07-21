@@ -4,12 +4,14 @@ import '../App.css';
 const WareH = () => {
 
   const [medicine, setWareHouseInfo ] = useState({});
-  const [ tab, setTab ] = useState( 1);
+  const [ tab, setTab ] = useState(1);
   const [ data, setData ] = useState();
 
+
   
+
     return ( 
-      <div className="ware" >
+      <div className="ware">
         <div className="addToWareHouse" >
           {
             <input onChange={(e)=> setWareHouseInfo({...medicine, MedicineName:e.target.value }) }
