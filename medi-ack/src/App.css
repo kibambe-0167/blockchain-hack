@@ -55,7 +55,7 @@
 /* main section */
 
 .App .main {
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 
@@ -71,6 +71,7 @@
     background-color: blue;
     padding-left: 10px;
     padding-right: 10px;
+    margin-top: 5em;
 }
 
 .manu .input_ {
@@ -91,4 +92,30 @@
     border-width: 0em;
     cursor: pointer;
     font-weight: bold;
+}
+
+.manu .manuTabs {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.manu .manuTab {
+    background-color: yellow;
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border-width: 0em;
+    cursor: pointer;
+}
+
+.manu .manuTab:hover {
+    background-color: white;
+    color: blue;
+}
+
+.manu .manuData {
+    background-color: yellow;
 }

@@ -1,10 +1,11 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from blocks import Blockchain
+from flask_cors import CORS
 
 
 # $env:FLASK_APP="index.py"
 app = Flask(__name__)
-
+CORS(app)
 
 
 # create object
@@ -18,21 +19,27 @@ def index():
 
 
 # create new block chain
-@app.route("/addblock", methods=['POST'])
+@app.route("/add", methods=['POST'])
 def add():
-  previous_block = blockchain.print_previous_block()
-  previous_proof = previous_block['proof']
-  proof = blockchain.proof_of_work(previous_proof)
-  previous_hash = blockchain.hash(previous_block)
-  block = blockchain.create_block(proof, previous_hash)
+  if request.method == 'POST':
+    data = request.get_json()
+    print( data )
+    return jsonify({"message":"got the data"}), 200
   
-  response = {'message': 'A block is MINED/Created',
-				'index': block['index'],
-				'timestamp': block['timestamp'],
-				'proof': block['proof'],
-				'previous_hash': block['previous_hash']}
   
-  return jsonify(response), 200
+  # previous_block = blockchain.print_previous_block()
+  # previous_proof = previous_block['proof']
+  # proof = blockchain.proof_of_work(previous_proof)
+  # previous_hash = blockchain.hash(previous_block)
+  # block = blockchain.create_block(proof, previous_hash)
+  
+  # response = {'message': 'A block is MINED/Created',
+	# 			'index': block['index'],
+	# 			'timestamp': block['timestamp'],
+	# 			'proof': block['proof'],
+	# 			'previous_hash': block['previous_hash']}
+  
+  # return jsonify(response), 200
 
 # show all data in the blockchain
 @app.route("/showall")
