@@ -1,0 +1,94 @@
+.App {
+    text-align: center;
+    min-height: 100vh;
+    background-color: #282c34;
+}
+
+.App .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    /* background-color: yellow; */
+}
+
+.App .title {
+    font-size: 40px;
+    width: 30%;
+    display: flex;
+    justify-content: right;
+    /* background-color: blue; */
+    /* align-self: center; */
+    text-align: right;
+    padding-right: .5em;
+}
+
+.App .tabs {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 70%;
+}
+
+.App .tab {
+    background-color: blue;
+    color: white;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.App .tab:hover {
+    background-color: white;
+    color: blue;
+}
+
+
+/* main section */
+
+.App .main {
+    background-color: yellow;
+}
+
+
+/*  */
+
+
+/* manufacturer component */
+
+.manu .addMeds {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: blue;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.manu .input_ {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border-width: 0px;
+}
+
+.manu .addBtn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border-width: 0em;
+    cursor: pointer;
+    font-weight: bold;
+}
