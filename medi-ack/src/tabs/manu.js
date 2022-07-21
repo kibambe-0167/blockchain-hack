@@ -91,9 +91,17 @@ const Manu = () => {
                 <input onChange={(e)=> setMedicine({...medicine, ManufacturerName:e.target.value }) }
                   placeholder="Manufacturer Name" className="input_" />
 
-                  <div className="Medate">
-                  <label for="receivedDate"> Manufactured Date : </label>
+                  <input onChange={(e)=> setMedicine({...medicine, MedicalUse:e.target.value }) }
+                  placeholder="Medical Purpose" className="input_" />
 
+
+                  <div className="Medate">
+                  <label for="receivedDate"><b> Manufactured Date : </b></label>
+
+                  <input onChange={(e)=> setMedicine({...medicine, Date:e.target.value }) }
+                  className="input_" type="Date" placeholder = "Enter Date"/>
+
+                  <label for="receivedDate"><b> Distributed Date : </b></label>
                   <input onChange={(e)=> setMedicine({...medicine, Date:e.target.value }) }
                   className="input_" type="Date" placeholder = "Enter Date"/>
 
@@ -101,9 +109,7 @@ const Manu = () => {
                   className="input_" type="Date" placeholder = "Enter Date"/> */}
                   </div>
                
-                <input onChange={(e)=> setMedicine({...medicine, MedicalUse:e.target.value }) }
-                  placeholder="Medical Purpose" className="input_" />
-
+                
                   <br/>
                 <button className="addBtn" onClick={() => add() } >
                   Enlist

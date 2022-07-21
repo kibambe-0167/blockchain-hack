@@ -108,6 +108,7 @@
     
 }
 
+
 .manu .manuTabs {
     /* background-color: red; */
     display: flex;
@@ -134,3 +135,4 @@
 .manu .manuData {
     background-color: white;
 }
+
