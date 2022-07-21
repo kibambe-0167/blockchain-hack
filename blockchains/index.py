@@ -29,7 +29,7 @@ def add():
     previous_proof = previous_block['proof']
     proof = blockchain.proof_of_work(previous_proof)
     previous_hash = blockchain.hash(previous_block)
-    block = blockchain.create_block(proof, previous_hash)
+    block = blockchain.create_block(proof, previous_hash, data)
     
     response = {'message': 'A block is MINED/Created',
           'index': block['index'],
@@ -41,7 +41,8 @@ def add():
     
     return jsonify(response), 200
   
-  
+  else:
+    return jsonify({"message": "Please use POST method"}), 400
 
 # show all data in the blockchain
 @app.route("/showall")
