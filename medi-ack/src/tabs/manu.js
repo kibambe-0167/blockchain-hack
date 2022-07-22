@@ -107,7 +107,7 @@ const Manu = () => {
                   <label for="receivedDate"><b> Manufactured Date : </b></label>
 
                   <input onChange={(e)=> setMedicine({...medicine, Date:e.target.value }) }
-                  className="input_" type="Date" placeholder = "Enter Date"/>
+                  className="input_" type="Date" placeholder = "Enter Date"/><br/>
 
                   <label for="receivedDate"><b> Distributed Date : </b></label>
                   <input onChange={(e)=> setMedicine({...medicine, Date:e.target.value }) }
