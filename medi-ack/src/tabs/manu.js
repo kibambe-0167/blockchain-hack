@@ -77,9 +77,9 @@ const Manu = () => {
   },[])
 
     return ( 
-      <div className="manu" >
+      <div className="manu col-xl-10 col-md-10">
 
-        <div className="manuTabs" >
+        <div className="manuTabs col-xl-10 col-md-10" >
           {/* <div onClick={()=>setTab(prev=>prev=1)} className="manuTab" >Add Medicine</div>
           <div onClick={()=>setTab(prev=>prev=2)} className="manuTab" >View Data</div>
           <div onClick={()=>setTab(prev=>prev=3)} className="manuTab" >Track Data</div> */}
