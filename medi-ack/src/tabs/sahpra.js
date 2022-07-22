@@ -36,7 +36,7 @@ const [ data, setData ] = useState();
                   placeholder="Staff Number" className="input_" />
 
                   
-                  <div className="Medate col-md-10">
+                  <div className="Medate col-xs-10 col-md-10">
                   <label for="receivedDate"><b> Reviewed Date : </b></label>
 
                   <input onChange={(e)=> setMedicine({...medicine, Date:e.target.value }) }
