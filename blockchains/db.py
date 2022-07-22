@@ -76,11 +76,29 @@ def getMed( proof ):
 # insert meds data
 def insertMeds( proof, data ):
   try:
+    print( data )
     cursor = connect_.cursor()
-    cursor.execute("INSERT INTO manufacturer('med_name','manufacturer_name','date_made', 'date_distributed','meds_use','proof') VALUES ('{data['MedicineName']}','{data['ManufacturerName']}','{data['Date']}','{data['DateD']}', '{data['Medicaluse']}','proof')")
+    cursor.execute("INSERT INTO manufacturer('med_name','manufacturer_name','date_made', 'date_distributed','meds_use','proof') VALUES ('{data['MedicineName']}','{data['ManufacturerName']}','{data['DateMade']}','{data['DateDistr']}', '{data['MedicalUse']}','proof')")
+    cursor.commit()
+    # data = cursor.fetchall()
     if cursor.countrow > 0:
-      pass
+      return "Data Inserted"
     else:
       return "No Data Found"
   except Exception as e:
-    return e;
+    print(e)
+    return "Data Not Found";
+  
+  
+# check if a medicine exist in the block chain.
+def checkBatch( batch ):
+  try:
+    cursor = connect_.cursor()
+    cursor.execute( f"SELECT * FROM manufacturer WHERE 'id_medicine'='{batch}'" )
+    result = cursor.fetchone()
+    if cursor.countrow > 0:
+      return result
+    else:
+      return "No Data Found"
+  except Exception as e:
+    return "Error getting medicine";

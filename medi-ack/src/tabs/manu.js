@@ -12,13 +12,14 @@ const Manu = () => {
   const add = () => {
     console.log( medicine );
 
-    if( medicine['Date'] && medicine['MedicineName'] && medicine['MedicalUse'] && medicine['ManufacturerName'] ) {
+    if( medicine['DateMade'] && medicine['MedicineName'] && medicine['MedicalUse'] && medicine['ManufacturerName'] ) {
 
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
 
       var raw = JSON.stringify({
-        "Date": medicine['Date'],
+        "DateMade": medicine['DateMade'],
+        "DateDistr": medicine['DateDistr'],
         "MedicineName": medicine['MedicineName'],
         "MedicalUse": medicine['MedicalUse'],
         "ManufacturerName": medicine['ManufacturerName'],
@@ -106,11 +107,11 @@ const Manu = () => {
                   <div className="Medate col-xs-10 col-md-10">
                   <label for="receivedDate"><b> Manufactured Date : </b></label>
 
-                  <input onChange={(e)=> setMedicine({...medicine, Date:e.target.value }) }
+                  <input onChange={(e)=> setMedicine({...medicine, DateMade:e.target.value }) }
                   className="input_" type="Date" placeholder = "Enter Date"/><br/>
 
                   <label for="receivedDate"><b> Distributed Date : </b></label>
-                  <input onChange={(e)=> setMedicine({...medicine, Date:e.target.value }) }
+                  <input onChange={(e)=> setMedicine({...medicine, DateDistr:e.target.value }) }
                   className="input_" type="Date" placeholder = "Enter Date"/>
 
                   {/* <input onChange={(e)=> setMedicine({...medicine, Date:e.target.value }) }
