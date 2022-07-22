@@ -89,7 +89,7 @@ const Manu = () => {
         <div >
           {
             tab === 1 ? (
-              <div className="addMeds col-xs-10 col-md-10" >
+              <div className="addMeds col-xs-14 col-md-10" >
                  {/* <input onChange={(e)=> setMedicine({...medicine, name:e.target.value }) }
                   placeholder="Medicine ID" className="input_" /> */}
                   
