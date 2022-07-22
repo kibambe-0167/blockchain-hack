@@ -77,7 +77,7 @@ def getMed( proof ):
 def insertMeds( proof, data ):
   try:
     cursor = connect_.cursor()
-    cursor.execute("INSERT INTO manufacturer('med_name','manufacturer_name','date_made', 'date_distributed','meds_use','proof') VALUES ('{data['MedicineName']}','{data['ManufacturerName']}','{data['Date']}','{block['proof']}' )")
+    cursor.execute("INSERT INTO manufacturer('med_name','manufacturer_name','date_made', 'date_distributed','meds_use','proof') VALUES ('{data['MedicineName']}','{data['ManufacturerName']}','{data['Date']}','{data['DateD']}', '{data['Medicaluse']}','proof')")
     if cursor.countrow > 0:
       pass
     else:
